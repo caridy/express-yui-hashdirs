@@ -9,6 +9,7 @@
 var plugin = require('./lib/plugin');
 
 module.exports = {
+    // put locator plugin on "yui" property per express-yui convention
     yui: function () {
         return plugin;
     }
