@@ -1,0 +1,19 @@
+{
+  "name": "express-yui-hashdirs",
+  "version": "0.0.0",
+  "description": "Locator-plugin to use with express-yui that suffixes client-side bundle sub-directory names with a hash of the contents of some of it's files contents.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "dependencies": {
+    "hashsome": "~0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Isao Yagi <isao@yahoo-inc.com>",
+  "license": "BSD"
+}
