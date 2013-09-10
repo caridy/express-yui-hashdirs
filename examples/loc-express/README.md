@@ -1,6 +1,8 @@
 What is this example?
 ---------------------
 
+This example is based on [this one](https://github.com/yahoo/express-yui/tree/master/examples/locator-express).
+
 This examples demonstrate how to use `express-yui` with `locator` in an express application. It also demonstrate how to use `locator-handlebars` and `locator-micro` plugins to compile templates to YUI modules as well as the use of app level yui modules (e.g: `binder-index` and `alerts-model`).
 
 

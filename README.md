@@ -1,3 +1,15 @@
+# express-yui-hashdirs
+
+This is a (wip) [Locator](https://github.com/yahoo/locator) plugin for use with [Express-YUI](https://github.com/yahoo/express-yui). It renames bundle build directories that were processed by Express-YUI. The directories that it processes are based on the client-side "meta-module" YUI Loader metadata.
+
+It's purpose is to support hashed URLs for content-based versioning at the sub-bundle level.
+
+### todo
+- invoke locator's plugin `fileUpdated` (and `fileDeleted`?) api
+- return a valid promise
+
+ignore the stuff below, just wip dumps
+
 ### fileUpdated evt keys: [ 'file', 'bundle' ]
 
     { file:
