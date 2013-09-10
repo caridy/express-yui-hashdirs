@@ -49,13 +49,6 @@ new Locator({
     // i.e. build/demo/loader-demo.js
     .plug(LocatorHashDirs.yui())
 
-    // debugging
-    .plug({
-        bundleUpdated: function(evt, api) {
-        	console.log('* * bundleUpdated files:', Object.keys(evt.files));
-        }
-    })
-
     .plug(app.yui.plugin({
         registerGroup: true,
         registerServerModules: true
