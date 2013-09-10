@@ -37,12 +37,18 @@ app.get('/foo', expyui.expose(), function (req, res, next) {
 
 // locator initialiation
 new Locator({
+        // fn to set bundle build dir name to just bundle name (no -version)
         bundleBuildDirectoryParser: function (bundle) { return bundle.name; },
         buildDirectory: 'build'
     })
     .plug(LocatorHandlebars.yui())
     .plug(LocatorMicro.yui())
+
+    // plugin to rename bundle build dirs whose modules are listed in the
+    // express-yui meta-module's yui loader config
+    // i.e. build/demo/loader-demo.js
     .plug(LocatorHashDirs.yui())
+
     .plug(app.yui.plugin({
         registerGroup: true,
         registerServerModules: true
@@ -61,17 +67,4 @@ new Locator({
         console.log(e);
         console.log(e.stack);
     });
-*/
-/*
-    .parseBundle(__dirname, {})
-    .then(function () { // testing only
-        debug('hashfiles START');
-        hashfiles('build/demo', {}, function(err, hashes, invalid) {
-            console.log('hashes >\n', hashes);
-            console.log('invalid >\n', invalid);
-            console.log(err || 'no error');
-            debug('hashfiles END');
-        });
-    });
-
 */
